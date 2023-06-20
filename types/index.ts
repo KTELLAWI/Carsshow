@@ -53,10 +53,10 @@ export interface OptionProps {
   value: string;
 }
 
-export interface CustomFilterProps {
-  title: string;
-  options: OptionProps[];
-}
+// export interface CustomFilterProps {
+//   title: string;
+//   options: OptionProps[];
+// }
 
 export interface ShowMoreProps {
   pageNumber: number;
@@ -66,4 +66,25 @@ export interface ShowMoreProps {
 export interface SearchManuFacturerProps {
   manufacturer: string;
   setManuFacturer: (manufacturer: string) => void;
+}
+
+export interface SearchBarProps {
+  setManuFacturer: (manufacturer: string) => void;
+  setModel: (model: string) => void;
+}
+
+export interface CustomFilterProps<T> {
+  options: OptionProps[];
+  setFilter: (selected: T) => void;
+}
+
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext: boolean;
+  setLimit: (limit: number) => void;
+}
+
+export interface SearchManuFacturerProps {
+  selected: string;
+  setSelected: (selected: string) => void;
 }
